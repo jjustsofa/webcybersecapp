@@ -1,5 +1,5 @@
 # SuperAnonim: маскировка персональных данных в подписанных документах
-
+![](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png)
 ## Установка и запуск
 ### Windows (PowerShell)
 ```sh
