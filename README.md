@@ -1,5 +1,5 @@
 # SuperAnonim: маскировка персональных данных в подписанных документах
-![](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png)
+![Scan before mask](https://github.com/jjustsofa/webcybersecapp/blob/main/20(44).png)
 ## Установка и запуск
 ### Windows (PowerShell)
 ```sh
