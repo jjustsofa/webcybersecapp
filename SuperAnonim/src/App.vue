@@ -5,10 +5,10 @@ import {Notifications, notify} from "@kyvg/vue3-notification";
 
 
 onMounted(() => {
-  notify({text: 'Пользуясь сайтом вы соглашаетесь с <a href="http://localhost:8080/sogl">пользовательским соглашением</a>'})
+  notify({text: 'Пользуясь сайтом вы принимаете <a href="http://localhost:8080/sogl">пользовательское соглашение</a>'})
 })
 
-
+a
 const lol = ref({
   href: '',
   download: ''
@@ -165,10 +165,10 @@ const handler = (event) => {
       </div>
     </div>
   </main>
-  <notifications position="bottom center" duration="-1">
+  <notifications position="bottom center" duration="-1" width="300px">
     <template #body="props">
       <div class="my-notification" :class="props.item.type === 'negative' ? 'negative' : ''">
-        <div v-html="props.item.text"/>
+        <div style="max-width: 270px;" v-html="props.item.text"/>
         <button class="close" @click="() => {props.close(); off = false;}">Ок</button>
       </div>
     </template>
@@ -176,6 +176,13 @@ const handler = (event) => {
 </template>
 
 <style scoped>
+.close {
+  width: 270px;
+  height: 50px;
+  border: #181818 solid 1px;
+  border-radius: 5px;
+}
+
 .cont3 {
   display: flex;
   flex-direction: column;
@@ -192,11 +199,14 @@ const handler = (event) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+  flex-direction: column;
+  padding: 10px 10px 10px 15px;
   width: auto;
   gap: 5px;
   font-family: Inter, sans-serif;
+  text-align: center;
 }
+
 
 .negative {
   background-color: #E63946;
